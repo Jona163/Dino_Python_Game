@@ -61,3 +61,11 @@ class Dino(pygame.sprite.Sprite):
     def duck(self):
         self.ducking = True
         self.rect.centery = 380
+
+    def unduck(self):
+        self.ducking = False
+        self.rect.centery = 360
+
+    def apply_gravity(self):
+        if self.rect.centery <= 360:
+            self.rect.centery += self.gravity
