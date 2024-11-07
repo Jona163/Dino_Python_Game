@@ -26,3 +26,13 @@ class Cloud(pygame.sprite.Sprite):
 
     def update(self):
         self.rect.x -= 1
+
+class Dino(pygame.sprite.Sprite):
+    def __init__(self, x_pos, y_pos):
+        super().__init__()
+        self.running_sprites = []
+        self.ducking_sprites = []
+
+        self.running_sprites.append(pygame.transform.scale(
+            pygame.image.load("assets/Dino1.png"), (80, 100)))
+        self.running_sprites.append(pygame.transform.scale(
