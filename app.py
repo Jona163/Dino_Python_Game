@@ -96,3 +96,7 @@ class Cactus(pygame.sprite.Sprite):
             self.sprites.append(current_sprite)
         self.image = random.choice(self.sprites)
         self.rect = self.image.get_rect(center=(self.x_pos, self.y_pos))
+
+    def update(self):
+        self.x_pos -= game_speed
+        self.rect = self.image.get_rect(center=(self.x_pos, self.y_pos))
