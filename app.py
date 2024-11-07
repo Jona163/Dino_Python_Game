@@ -36,3 +36,9 @@ class Dino(pygame.sprite.Sprite):
         self.running_sprites.append(pygame.transform.scale(
             pygame.image.load("assets/Dino1.png"), (80, 100)))
         self.running_sprites.append(pygame.transform.scale(
+           pygame.image.load("assets/Dino2.png"), (80, 100)))
+
+        self.ducking_sprites.append(pygame.transform.scale(
+            pygame.image.load(f"assets/DinoDucking1.png"), (110, 60)))
+        self.ducking_sprites.append(pygame.transform.scale(
+            pygame.image.load(f"assets/DinoDucking2.png"), (110, 60)))
