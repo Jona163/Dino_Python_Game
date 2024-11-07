@@ -83,3 +83,11 @@ class Dino(pygame.sprite.Sprite):
             self.image = self.ducking_sprites[int(self.current_image)]
         else:
             self.image = self.running_sprites[int(self.current_image)]
+
+class Cactus(pygame.sprite.Sprite):
+    def __init__(self, x_pos, y_pos):
+        super().__init__()
+        self.x_pos = x_pos
+        self.y_pos = y_pos
+        self.sprites = []
+        for i in range(1, 7):
