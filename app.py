@@ -128,3 +128,14 @@ class Ptero(pygame.sprite.Sprite):
         if self.current_image >= 2:
             self.current_image = 0
         self.image = self.sprites[int(self.current_image)]
+
+# Variables
+
+
+game_speed = 5
+jump_count = 10
+player_score = 0
+game_over = False
+obstacle_timer = 0
+obstacle_spawn = False
+obstacle_cooldown = 1000
