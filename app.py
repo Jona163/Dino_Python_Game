@@ -78,3 +78,8 @@ class Dino(pygame.sprite.Sprite):
         self.current_image += 0.05
         if self.current_image >= 2:
             self.current_image = 0
+
+        if self.ducking:
+            self.image = self.ducking_sprites[int(self.current_image)]
+        else:
+            self.image = self.running_sprites[int(self.current_image)]
