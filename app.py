@@ -69,3 +69,12 @@ class Dino(pygame.sprite.Sprite):
     def apply_gravity(self):
         if self.rect.centery <= 360:
             self.rect.centery += self.gravity
+
+    def update(self):
+        self.animate()
+        self.apply_gravity()
+
+    def animate(self):
+        self.current_image += 0.05
+        if self.current_image >= 2:
+            self.current_image = 0
